@@ -3,27 +3,44 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7B70B72426399A770037011B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B72326399A770037011B /* AppDelegate.swift */; };
-		7B70B72626399A770037011B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B72526399A770037011B /* SceneDelegate.swift */; };
-		7B70B72826399A770037011B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B72726399A770037011B /* ViewController.swift */; };
-		7B70B72B26399A770037011B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B70B72926399A770037011B /* Main.storyboard */; };
 		7B70B72D26399A780037011B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B70B72C26399A780037011B /* Assets.xcassets */; };
 		7B70B73026399A780037011B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B70B72E26399A780037011B /* LaunchScreen.storyboard */; };
+		7B70B73926399AD00037011B /* RIBs in Frameworks */ = {isa = PBXBuildFile; productRef = 7B70B73826399AD00037011B /* RIBs */; };
+		7B70B74226399B3D0037011B /* MasterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B73D26399B3D0037011B /* MasterRouter.swift */; };
+		7B70B74326399B3D0037011B /* MasterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B70B73E26399B3D0037011B /* MasterViewController.storyboard */; };
+		7B70B74426399B3D0037011B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B73F26399B3D0037011B /* MasterViewController.swift */; };
+		7B70B74526399B3D0037011B /* MasterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B74026399B3D0037011B /* MasterBuilder.swift */; };
+		7B70B74626399B3D0037011B /* MasterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B74126399B3D0037011B /* MasterInteractor.swift */; };
+		7B70B74B26399B530037011B /* DetailViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B74726399B530037011B /* DetailViewControllerRouter.swift */; };
+		7B70B74C26399B530037011B /* DetailViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B74826399B530037011B /* DetailViewControllerViewController.swift */; };
+		7B70B74D26399B530037011B /* DetailViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B74926399B530037011B /* DetailViewControllerBuilder.swift */; };
+		7B70B74E26399B530037011B /* DetailViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B74A26399B530037011B /* DetailViewControllerInteractor.swift */; };
+		7B70B7532639A0760037011B /* RIBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B7522639A0760037011B /* RIBNavigationController.swift */; };
+		7B70B7552639AB0C0037011B /* NavigationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B7542639AB0C0037011B /* NavigationComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B70B72026399A770037011B /* NavigatableRIBs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigatableRIBs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B70B72326399A770037011B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7B70B72526399A770037011B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B70B72726399A770037011B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7B70B72A26399A770037011B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B70B72C26399A780037011B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B70B72F26399A780037011B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B70B73126399A780037011B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B70B73D26399B3D0037011B /* MasterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterRouter.swift; sourceTree = "<group>"; };
+		7B70B73E26399B3D0037011B /* MasterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MasterViewController.storyboard; sourceTree = "<group>"; };
+		7B70B73F26399B3D0037011B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		7B70B74026399B3D0037011B /* MasterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterBuilder.swift; sourceTree = "<group>"; };
+		7B70B74126399B3D0037011B /* MasterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterInteractor.swift; sourceTree = "<group>"; };
+		7B70B74726399B530037011B /* DetailViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerRouter.swift; sourceTree = "<group>"; };
+		7B70B74826399B530037011B /* DetailViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerViewController.swift; sourceTree = "<group>"; };
+		7B70B74926399B530037011B /* DetailViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerBuilder.swift; sourceTree = "<group>"; };
+		7B70B74A26399B530037011B /* DetailViewControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerInteractor.swift; sourceTree = "<group>"; };
+		7B70B7522639A0760037011B /* RIBNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIBNavigationController.swift; sourceTree = "<group>"; };
+		7B70B7542639AB0C0037011B /* NavigationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B70B73926399AD00037011B /* RIBs in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +74,47 @@
 		7B70B72226399A770037011B /* NavigatableRIBs */ = {
 			isa = PBXGroup;
 			children = (
+				7B70B74F26399E410037011B /* Navigation */,
+				7B70B73B26399B1D0037011B /* MasterRIBs */,
+				7B70B73C26399B280037011B /* DetailRIBs */,
 				7B70B72326399A770037011B /* AppDelegate.swift */,
-				7B70B72526399A770037011B /* SceneDelegate.swift */,
-				7B70B72726399A770037011B /* ViewController.swift */,
-				7B70B72926399A770037011B /* Main.storyboard */,
 				7B70B72C26399A780037011B /* Assets.xcassets */,
 				7B70B72E26399A780037011B /* LaunchScreen.storyboard */,
 				7B70B73126399A780037011B /* Info.plist */,
 			);
 			path = NavigatableRIBs;
+			sourceTree = "<group>";
+		};
+		7B70B73B26399B1D0037011B /* MasterRIBs */ = {
+			isa = PBXGroup;
+			children = (
+				7B70B73D26399B3D0037011B /* MasterRouter.swift */,
+				7B70B74026399B3D0037011B /* MasterBuilder.swift */,
+				7B70B74126399B3D0037011B /* MasterInteractor.swift */,
+				7B70B73F26399B3D0037011B /* MasterViewController.swift */,
+				7B70B73E26399B3D0037011B /* MasterViewController.storyboard */,
+			);
+			path = MasterRIBs;
+			sourceTree = "<group>";
+		};
+		7B70B73C26399B280037011B /* DetailRIBs */ = {
+			isa = PBXGroup;
+			children = (
+				7B70B74726399B530037011B /* DetailViewControllerRouter.swift */,
+				7B70B74926399B530037011B /* DetailViewControllerBuilder.swift */,
+				7B70B74A26399B530037011B /* DetailViewControllerInteractor.swift */,
+				7B70B74826399B530037011B /* DetailViewControllerViewController.swift */,
+			);
+			path = DetailRIBs;
+			sourceTree = "<group>";
+		};
+		7B70B74F26399E410037011B /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				7B70B7542639AB0C0037011B /* NavigationComponent.swift */,
+				7B70B7522639A0760037011B /* RIBNavigationController.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +133,9 @@
 			dependencies = (
 			);
 			name = NavigatableRIBs;
+			packageProductDependencies = (
+				7B70B73826399AD00037011B /* RIBs */,
+			);
 			productName = NavigatableRIBs;
 			productReference = 7B70B72026399A770037011B /* NavigatableRIBs.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +163,9 @@
 				Base,
 			);
 			mainGroup = 7B70B71726399A770037011B;
+			packageReferences = (
+				7B70B73726399AD00037011B /* XCRemoteSwiftPackageReference "RIBs" */,
+			);
 			productRefGroup = 7B70B72126399A770037011B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,8 +181,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B70B73026399A780037011B /* LaunchScreen.storyboard in Resources */,
+				7B70B74326399B3D0037011B /* MasterViewController.storyboard in Resources */,
 				7B70B72D26399A780037011B /* Assets.xcassets in Resources */,
-				7B70B72B26399A770037011B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +193,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B70B72826399A770037011B /* ViewController.swift in Sources */,
+				7B70B74C26399B530037011B /* DetailViewControllerViewController.swift in Sources */,
+				7B70B7552639AB0C0037011B /* NavigationComponent.swift in Sources */,
+				7B70B74426399B3D0037011B /* MasterViewController.swift in Sources */,
+				7B70B7532639A0760037011B /* RIBNavigationController.swift in Sources */,
+				7B70B74526399B3D0037011B /* MasterBuilder.swift in Sources */,
+				7B70B74E26399B530037011B /* DetailViewControllerInteractor.swift in Sources */,
 				7B70B72426399A770037011B /* AppDelegate.swift in Sources */,
-				7B70B72626399A770037011B /* SceneDelegate.swift in Sources */,
+				7B70B74B26399B530037011B /* DetailViewControllerRouter.swift in Sources */,
+				7B70B74226399B3D0037011B /* MasterRouter.swift in Sources */,
+				7B70B74D26399B530037011B /* DetailViewControllerBuilder.swift in Sources */,
+				7B70B74626399B3D0037011B /* MasterInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7B70B72926399A770037011B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7B70B72A26399A770037011B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7B70B72E26399A780037011B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -339,6 +395,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7B70B73726399AD00037011B /* XCRemoteSwiftPackageReference "RIBs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/RIBs.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B70B73826399AD00037011B /* RIBs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B70B73726399AD00037011B /* XCRemoteSwiftPackageReference "RIBs" */;
+			productName = RIBs;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7B70B71826399A770037011B /* Project object */;
 }

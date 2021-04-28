@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vKn-9P-Ny8">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Master View Controller-->
+        <scene sceneID="GzV-lN-fg7">
+            <objects>
+                <viewController id="vKn-9P-Ny8" customClass="MasterViewController" customModule="NavigatableRIBs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BNZ-bO-rhc">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="x3B-Mm-PE4">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="838"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MasterExampleCell" id="i6b-ae-Ax1">
+                                        <rect key="frame" x="20" y="49" width="388" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i6b-ae-Ax1" id="AVb-Mi-Aba">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vKn-9P-Ny8" id="6PO-pZ-cVz"/>
+                                    <outlet property="delegate" destination="vKn-9P-Ny8" id="IAi-Il-3an"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HgA-Aw-ocO"/>
+                        <constraints>
+                            <constraint firstItem="HgA-Aw-ocO" firstAttribute="trailing" secondItem="x3B-Mm-PE4" secondAttribute="trailing" id="XTp-aK-dvc"/>
+                            <constraint firstAttribute="bottom" secondItem="x3B-Mm-PE4" secondAttribute="bottom" id="eSA-Ub-bIj"/>
+                            <constraint firstItem="x3B-Mm-PE4" firstAttribute="top" secondItem="BNZ-bO-rhc" secondAttribute="top" id="gJF-zc-VTh"/>
+                            <constraint firstItem="x3B-Mm-PE4" firstAttribute="leading" secondItem="HgA-Aw-ocO" secondAttribute="leading" id="jmf-8u-I7c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kFd-Pl-8fa"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0X-am-vwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88.317757009345783" y="85.529157667386613"/>
+        </scene>
+    </scenes>
+</document>
