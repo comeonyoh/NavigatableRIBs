@@ -29,10 +29,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-
-class MasterCompoment: Component<EmptyDependency>, MasterDependency {
-
-    init() {
-        super.init(dependency: EmptyComponent())
-    }
-}

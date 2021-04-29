@@ -16,10 +16,10 @@
 		7B70B74426399B3D0037011B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B73F26399B3D0037011B /* MasterViewController.swift */; };
 		7B70B74526399B3D0037011B /* MasterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B74026399B3D0037011B /* MasterBuilder.swift */; };
 		7B70B74626399B3D0037011B /* MasterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B74126399B3D0037011B /* MasterInteractor.swift */; };
-		7B70B74B26399B530037011B /* DetailViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B74726399B530037011B /* DetailViewControllerRouter.swift */; };
-		7B70B74C26399B530037011B /* DetailViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B74826399B530037011B /* DetailViewControllerViewController.swift */; };
-		7B70B74D26399B530037011B /* DetailViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B74926399B530037011B /* DetailViewControllerBuilder.swift */; };
-		7B70B74E26399B530037011B /* DetailViewControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B74A26399B530037011B /* DetailViewControllerInteractor.swift */; };
+		7B70B74B26399B530037011B /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B74726399B530037011B /* DetailRouter.swift */; };
+		7B70B74C26399B530037011B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B74826399B530037011B /* DetailViewController.swift */; };
+		7B70B74D26399B530037011B /* DetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B74926399B530037011B /* DetailBuilder.swift */; };
+		7B70B74E26399B530037011B /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B74A26399B530037011B /* DetailInteractor.swift */; };
 		7B70B7532639A0760037011B /* RIBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B7522639A0760037011B /* RIBNavigationController.swift */; };
 		7B70B7552639AB0C0037011B /* NavigationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B7542639AB0C0037011B /* NavigationComponent.swift */; };
 /* End PBXBuildFile section */
@@ -35,10 +35,10 @@
 		7B70B73F26399B3D0037011B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		7B70B74026399B3D0037011B /* MasterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterBuilder.swift; sourceTree = "<group>"; };
 		7B70B74126399B3D0037011B /* MasterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterInteractor.swift; sourceTree = "<group>"; };
-		7B70B74726399B530037011B /* DetailViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerRouter.swift; sourceTree = "<group>"; };
-		7B70B74826399B530037011B /* DetailViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerViewController.swift; sourceTree = "<group>"; };
-		7B70B74926399B530037011B /* DetailViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerBuilder.swift; sourceTree = "<group>"; };
-		7B70B74A26399B530037011B /* DetailViewControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerInteractor.swift; sourceTree = "<group>"; };
+		7B70B74726399B530037011B /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		7B70B74826399B530037011B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7B70B74926399B530037011B /* DetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBuilder.swift; sourceTree = "<group>"; };
+		7B70B74A26399B530037011B /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		7B70B7522639A0760037011B /* RIBNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIBNavigationController.swift; sourceTree = "<group>"; };
 		7B70B7542639AB0C0037011B /* NavigationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,10 +100,10 @@
 		7B70B73C26399B280037011B /* DetailRIBs */ = {
 			isa = PBXGroup;
 			children = (
-				7B70B74726399B530037011B /* DetailViewControllerRouter.swift */,
-				7B70B74926399B530037011B /* DetailViewControllerBuilder.swift */,
-				7B70B74A26399B530037011B /* DetailViewControllerInteractor.swift */,
-				7B70B74826399B530037011B /* DetailViewControllerViewController.swift */,
+				7B70B74726399B530037011B /* DetailRouter.swift */,
+				7B70B74926399B530037011B /* DetailBuilder.swift */,
+				7B70B74A26399B530037011B /* DetailInteractor.swift */,
+				7B70B74826399B530037011B /* DetailViewController.swift */,
 			);
 			path = DetailRIBs;
 			sourceTree = "<group>";
@@ -193,16 +193,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B70B74C26399B530037011B /* DetailViewControllerViewController.swift in Sources */,
+				7B70B74C26399B530037011B /* DetailViewController.swift in Sources */,
 				7B70B7552639AB0C0037011B /* NavigationComponent.swift in Sources */,
 				7B70B74426399B3D0037011B /* MasterViewController.swift in Sources */,
 				7B70B7532639A0760037011B /* RIBNavigationController.swift in Sources */,
 				7B70B74526399B3D0037011B /* MasterBuilder.swift in Sources */,
-				7B70B74E26399B530037011B /* DetailViewControllerInteractor.swift in Sources */,
+				7B70B74E26399B530037011B /* DetailInteractor.swift in Sources */,
 				7B70B72426399A770037011B /* AppDelegate.swift in Sources */,
-				7B70B74B26399B530037011B /* DetailViewControllerRouter.swift in Sources */,
+				7B70B74B26399B530037011B /* DetailRouter.swift in Sources */,
 				7B70B74226399B3D0037011B /* MasterRouter.swift in Sources */,
-				7B70B74D26399B530037011B /* DetailViewControllerBuilder.swift in Sources */,
+				7B70B74D26399B530037011B /* DetailBuilder.swift in Sources */,
 				7B70B74626399B3D0037011B /* MasterInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +344,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NavigatableRIBs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,6 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = NavigatableRIBs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -15,16 +15,20 @@ protocol MasterPresentableListener: class {
 
 enum MasterExampleCase: Int, CaseIterable {
     
-    case success
-    case forcedExit
+    case normal
+    case exception
+    case successive
     
     var description: String {
         switch self {
-        case .success:
-            return "Success case"
+        case .normal:
+            return "Normal case"
             
-        case .forcedExit:
-            return "Forced app exit"
+        case .exception:
+            return "Exception case"
+            
+        case .successive:
+            return "Successive case"
         }
     }
 }

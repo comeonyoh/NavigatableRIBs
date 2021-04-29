@@ -39,14 +39,14 @@ final class MasterRouter: ViewableRouter<MasterInteractable, MasterViewControlla
     
     func routeToDetail(at case: MasterExampleCase) {
         
-        let detail = DetailViewControllerBuilder(dependency: DetailComponent()).build(`case`)
+        let detail = DetailBuilder(dependency: DetailComponent()).build(`case`)
         
         attachChild(detail)
         self.viewController.pushViewController(detail.viewControllable.uiviewController, animated: true)
     }
 }
 
-class DetailComponent: Component<EmptyDependency>, DetailViewControllerDependency {
+class MasterCompoment: Component<EmptyDependency>, MasterDependency {
 
     init() {
         super.init(dependency: EmptyComponent())

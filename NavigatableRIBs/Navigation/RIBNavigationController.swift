@@ -18,7 +18,12 @@ class RIBNavigationController: UINavigationController, UINavigationControllerDel
     
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         
+        if let topViewController = self.topViewController, topViewController.isKind(of: UINavigationController.classForCoder()) == false {
+            assert(topViewController is NavigationDetector, "Current topViewController must be NavigationDetector.")
+        }
+        
         assert(viewController is NavigationControllable, "Only 'NavigationControllable' UIViewController can be pushed on the stack.")
+        
         super.pushViewController(viewController, animated: animated)
     }
 
