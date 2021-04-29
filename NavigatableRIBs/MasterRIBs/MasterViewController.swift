@@ -70,6 +70,7 @@ extension MasterViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         listener?.didExampleCellSelected(at: MasterExampleCase(rawValue: indexPath.row)!)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

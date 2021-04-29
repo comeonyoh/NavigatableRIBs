@@ -27,6 +27,7 @@ final class DetailRouter: ViewableRouter<DetailInteractable, DetailViewControlla
         let detail = DetailBuilder(dependency: DetailComponent()).build(.successive)
 
         if let viewController = self.viewController as? NavigationControllable {
+            attachChild(detail)
             viewController.pushViewController(detail.viewControllable.uiviewController, animated: true)
         }
     }

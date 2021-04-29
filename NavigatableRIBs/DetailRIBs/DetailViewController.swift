@@ -52,7 +52,7 @@ class SuccessiveViewController: DetailViewController, NavigationControllable, Na
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        print("Success View Controller: \(self)")
+        print("\(self)")
         guard let count = self.navigationController?.children.count else {
             return
         }

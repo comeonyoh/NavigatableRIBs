@@ -43,11 +43,14 @@ extension NavigationDetector where Self: UIViewController & NavigationControllab
 extension Routing {
     
     func detachChild(_ child: Routing, _ recursive: Bool) {
+        
         if recursive == true && child.children.count > 0 {
-            child.detachChild(child, recursive)
+
+            for innerChild in child.children {
+                child.detachChild(innerChild, true)
+            }
         }
-        else {
-            detachChild(child)
-        }
+
+        detachChild(child)
     }
 }
