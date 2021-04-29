@@ -7,11 +7,11 @@ When we use the UINavigationController, we usually call `popViewController` by a
 It automatically deallocate `topViewController` of UINavigationController and don't care about it.
 
 When I tried to it with [RIBs framework](https://github.com/uber/RIBs), there are some problems.
-I can't call `detachChild` method of the router so it makes a memory leak bug. 
+I can't call `detachChild` method of the router directly. Because we cannot catch the `pop` swipe gesture. So it makes a memory leak bug. 
 
 
 ## The goal
-* Handle all the cases of navigation
+* Handle all the cases of navigation.
 * Not alter the pre-written codes. Let's just add some protocol for navigation.
 * Forced navigation rules.
 
