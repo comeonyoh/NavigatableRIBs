@@ -20,11 +20,7 @@ I can't call `detachChild` method of the router directly. Because we cannot catc
 Let's use `UINavigationControllerDelegate` and understand how to `didShow` method works. Behind the scene, I think after `animateTransition` method call and the `transitionContext: UIViewControllerContextTransitioning` transitionContext `didCompleted` with `true` value, `didShow` method of `UINavigationControllerDelegate` will be called. So we can trustly use the `didShow` method.
 
 2. Not alter the pre-written codes. Let's just add some protocol for navigation.
-We have huge pre-written codes with RIBs framework. So just using `ViewControllable` protocol in RIBs. I make a `NavigationControllable` protocol which conform to `ViewControllable` and it makes rule for navigation. The `routing` in this protocol is core variable. after the navigation `didShow`, it looks up the `routing` and deactive children. `NavigationDetector` protocol will be recevied the `didShow` event finished and detaches children router recursively.
-
-  **Why Recursive?**  
-    in iOS 14 and above, there is a new feature which show a menu button when the user long-click the button. So I have to detach multiple routers recursively.
-
+We have huge pre-written codes with RIBs framework. So I just use `ViewControllable` protocol in RIBs. I make a `NavigationControllable` protocol which conform to `ViewControllable` and it makes rule for navigation. The `routing` in this protocol is core variable. after the navigation `didShow`, it looks up the `routing` and deactive children. `NavigationDetector` protocol will be recevied the `didShow` event finished and detaches children router.
 
 3. Forced navigation rules.
 Even though the seasonal QA engineers, It is very difficult to find memory/multi-threading bugs when they tried to it. So we have to use `assert` to notify to the developers who use this rules and NavigationController. So I defined the rules in UINavigationController.
