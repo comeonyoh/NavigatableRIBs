@@ -26,7 +26,7 @@ We have huge pre-written codes with RIBs framework. So just using `ViewControlla
     in iOS 14 and above, there is a new feature which show a menu button when the user long-click the button. So I have to detach multiple routers recursively.
 
 
-3. NotForced navigation rules.
+3. Forced navigation rules.
 Even though the seasonal QA engineers, It is very difficult to find memory/multi-threading bugs when they tried to it. So we have to use `assert` to notify to the developers who use this rules and NavigationController. So I defined the rules in UINavigationController.
 
 
