@@ -35,22 +35,7 @@ extension NavigationDetector where Self: UIViewController & NavigationControllab
         }
         
         for child in children {
-            router?.detachChild(child, true)
+            router?.detachChild(child)
         }
-    }
-}
-
-extension Routing {
-    
-    func detachChild(_ child: Routing, _ recursive: Bool) {
-        
-        if recursive == true && child.children.count > 0 {
-
-            for innerChild in child.children {
-                child.detachChild(innerChild, true)
-            }
-        }
-
-        detachChild(child)
     }
 }
