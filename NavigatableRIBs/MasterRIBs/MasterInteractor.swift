@@ -16,15 +16,14 @@ protocol MasterPresentable: Presentable {
     var listener: MasterPresentableListener? { get set }
 }
 
-protocol MasterListener: class {
-}
-
 final class MasterInteractor: PresentableInteractor<MasterPresentable>, MasterInteractable {
+    
+    var flushRouter: CommonRIBsResourceFlush? {
+        router as? CommonRIBsResourceFlush
+    }
 
     weak var router: MasterRouting?
     
-    weak var listener: MasterListener?
-
     override init(presenter: MasterPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self

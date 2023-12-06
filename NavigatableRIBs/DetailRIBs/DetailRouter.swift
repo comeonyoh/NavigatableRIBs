@@ -12,30 +12,17 @@ protocol DetailInteractable: Interactable {
     var listener: DetailListener? { get set }
 }
 
-protocol DetailViewControllable: ViewControllable {
-}
+final class DetailRouter: ViewableRouter<DetailInteractable, ViewControllable>, DetailRouting {
 
-final class DetailRouter: ViewableRouter<DetailInteractable, DetailViewControllable>, DetailRouting {
-
-    override init(interactor: DetailInteractable, viewController: DetailViewControllable) {
+    override init(interactor: DetailInteractable, viewController: ViewControllable) {
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
     
     func didSuccessivePushButtonClicked() {
         
-        let detail = DetailBuilder(dependency: DetailComponent()).build(.successive)
-
-        if let viewController = self.viewController as? NavigationControllable {
-            attachChild(detail)
-            viewController.pushViewController(detail.viewControllable.uiviewController, animated: true)
-        }
-    }
-}
-
-class DetailComponent: Component<EmptyDependency>, DetailDependency {
-
-    init() {
-        super.init(dependency: EmptyComponent())
+        let detail = DetailBuilder(dependency: EmptyComponent()).build(.successive)
+        attachChild(detail)
+        viewController.uiviewController.navigationController?.pushViewController(detail.viewControllable.uiviewController, animated: true)
     }
 }

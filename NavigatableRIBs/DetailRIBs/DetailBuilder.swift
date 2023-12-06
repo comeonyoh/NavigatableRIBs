@@ -7,16 +7,13 @@
 
 import RIBs
 
-protocol DetailDependency: Dependency {
-}
-
 // MARK: - Builder
 
 protocol DetailBuildable: Buildable {
     func build(_ case: MasterExampleCase) -> DetailRouting
 }
 
-final class DetailBuilder: Builder<DetailDependency>, DetailBuildable {
+final class DetailBuilder: Builder<Dependency>, DetailBuildable {
 
     func build(_ case: MasterExampleCase) -> DetailRouting {
         

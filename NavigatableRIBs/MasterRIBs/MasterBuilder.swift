@@ -7,17 +7,11 @@
 
 import RIBs
 
-protocol MasterDependency: Dependency {
-}
-
-final class MasterComponent: Component<MasterDependency> {
-}
-
 protocol MasterBuildable: Buildable {
     func build() -> MasterRouter
 }
 
-final class MasterBuilder: Builder<MasterDependency>, MasterBuildable {
+final class MasterBuilder: Builder<Dependency>, MasterBuildable {
     
     func build() -> MasterRouter {
 

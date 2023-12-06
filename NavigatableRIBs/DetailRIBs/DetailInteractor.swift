@@ -16,7 +16,7 @@ protocol DetailPresentable: Presentable {
     var listener: DetailPresentableListener? { get set }
 }
 
-protocol DetailListener: class {
+protocol DetailListener: AnyObject {
 }
 
 final class DetailInteractor: PresentableInteractor<DetailPresentable>, DetailInteractable, DetailPresentableListener {

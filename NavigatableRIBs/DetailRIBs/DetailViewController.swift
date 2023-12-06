@@ -9,11 +9,11 @@ import RIBs
 import RxSwift
 import UIKit
 
-protocol DetailPresentableListener: class {
+protocol DetailPresentableListener: AnyObject {
     func didSuccessivePushButtonClicked()
 }
 
-class DetailViewController: UIViewController, DetailPresentable, DetailViewControllable {
+class DetailViewController: UIViewController, DetailPresentable, ViewControllable {
 
     weak var listener: DetailPresentableListener?
     
@@ -38,14 +38,11 @@ class DetailViewController: UIViewController, DetailPresentable, DetailViewContr
     }
 }
 
-class NormalDetailViewController: DetailViewController, NavigationControllable {
-    
-}
+class NormalDetailViewController: DetailViewController {}
 
-class NonNavigationControllableDetailViewController: DetailViewController {
-}
+class NonNavigationControllableDetailViewController: DetailViewController {}
 
-class SuccessiveViewController: DetailViewController, NavigationControllable, NavigationDetector {
+class SuccessiveViewController: DetailViewController {
     
     var successiveButton: UIButton!
     

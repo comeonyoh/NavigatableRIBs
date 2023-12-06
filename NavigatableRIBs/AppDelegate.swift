@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
 
-        let launchRouter = MasterBuilder(dependency: MasterCompoment()).build()
+        let launchRouter = MasterBuilder(dependency: EmptyComponent()).build()
         
         self.launchRouter = launchRouter
         launchRouter.launch(from: window)

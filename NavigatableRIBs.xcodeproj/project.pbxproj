@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,7 +21,6 @@
 		7B70B74D26399B530037011B /* DetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B74926399B530037011B /* DetailBuilder.swift */; };
 		7B70B74E26399B530037011B /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B74A26399B530037011B /* DetailInteractor.swift */; };
 		7B70B7532639A0760037011B /* RIBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B7522639A0760037011B /* RIBNavigationController.swift */; };
-		7B70B7552639AB0C0037011B /* NavigationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B70B7542639AB0C0037011B /* NavigationComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +39,6 @@
 		7B70B74926399B530037011B /* DetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBuilder.swift; sourceTree = "<group>"; };
 		7B70B74A26399B530037011B /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		7B70B7522639A0760037011B /* RIBNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIBNavigationController.swift; sourceTree = "<group>"; };
-		7B70B7542639AB0C0037011B /* NavigationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +109,6 @@
 		7B70B74F26399E410037011B /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				7B70B7542639AB0C0037011B /* NavigationComponent.swift */,
 				7B70B7522639A0760037011B /* RIBNavigationController.swift */,
 			);
 			path = Navigation;
@@ -146,8 +143,9 @@
 		7B70B71826399A770037011B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					7B70B71F26399A770037011B = {
 						CreatedOnToolsVersion = 12.5;
@@ -194,7 +192,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B70B74C26399B530037011B /* DetailViewController.swift in Sources */,
-				7B70B7552639AB0C0037011B /* NavigationComponent.swift in Sources */,
 				7B70B74426399B3D0037011B /* MasterViewController.swift in Sources */,
 				7B70B7532639A0760037011B /* RIBNavigationController.swift in Sources */,
 				7B70B74526399B3D0037011B /* MasterBuilder.swift in Sources */,
@@ -258,6 +255,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -319,6 +317,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

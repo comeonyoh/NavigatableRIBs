@@ -9,7 +9,7 @@ import RIBs
 import RxSwift
 import UIKit
 
-protocol MasterPresentableListener: class {
+protocol MasterPresentableListener: AnyObject {
     func didExampleCellSelected(at case: MasterExampleCase)
 }
 
@@ -33,25 +33,23 @@ enum MasterExampleCase: Int, CaseIterable {
     }
 }
 
-final class MasterViewController: UIViewController, MasterPresentable, MasterViewControllable {
+final class MasterViewController: CommonRIBsViewController, MasterPresentable {
 
     weak var listener: MasterPresentableListener?
+    
+    override var flushRouter: CommonRIBsResourceFlush? {
+        
+        guard let listener = listener as? CommonRIBsInteractable else { return nil }
+        
+        return listener.flushRouter
+    }
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         self.navigationItem.title = "Example cases"
-    }
-    
-    var router: Routing? {
         
-        guard let interactor = self.listener as? MasterInteractor else {
-            return nil
-        }
-        
-        return interactor.router
     }
-
 }
 
 extension MasterViewController: UITableViewDataSource, UITableViewDelegate {
@@ -73,8 +71,6 @@ extension MasterViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
-
-extension MasterViewController: NavigationDetector {}
 
 func storyboard(_ name: String) -> UIStoryboard {
     UIStoryboard(name: name, bundle: .main)

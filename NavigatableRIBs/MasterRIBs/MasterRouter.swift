@@ -8,15 +8,11 @@
 import RIBs
 import UIKit
 
-protocol MasterInteractable: Interactable {
+protocol MasterInteractable: CommonRIBsInteractable {
     var router: MasterRouting? { get set }
-    var listener: MasterListener? { get set }
 }
 
-protocol MasterViewControllable: NavigationControllable {
-}
-
-final class MasterRouter: ViewableRouter<MasterInteractable, MasterViewControllable>, MasterRouting, LaunchRouting {
+final class MasterRouter: CommonRIBsRouter <MasterInteractable, ViewControllable>, MasterRouting, LaunchRouting {
     
     var navigationController: RIBNavigationController!
     
@@ -31,7 +27,7 @@ final class MasterRouter: ViewableRouter<MasterInteractable, MasterViewControlla
     }
 
     // TODO: Constructor inject child builder protocols to allow building children.
-    override init(interactor: MasterInteractable, viewController: MasterViewControllable) {
+    override init(interactor: MasterInteractable, viewController: ViewControllable) {
         
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
@@ -39,16 +35,7 @@ final class MasterRouter: ViewableRouter<MasterInteractable, MasterViewControlla
     
     func routeToDetail(at case: MasterExampleCase) {
         
-        let detail = DetailBuilder(dependency: DetailComponent()).build(`case`)
-        
-        attachChild(detail)
-        self.viewController.pushViewController(detail.viewControllable.uiviewController, animated: true)
-    }
-}
-
-class MasterCompoment: Component<EmptyDependency>, MasterDependency {
-
-    init() {
-        super.init(dependency: EmptyComponent())
+        let detail = DetailBuilder(dependency: EmptyComponent()).build(`case`)
+        push(nextRouter: detail, animated: true)
     }
 }
