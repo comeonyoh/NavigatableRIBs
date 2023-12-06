@@ -8,17 +8,17 @@
 import RIBs
 import UIKit
 
-protocol CommonRIBsInteractable: Interactable {
+public protocol CommonRIBsInteractable: Interactable {
     var flushRouter: CommonRIBsResourceFlush? { get }
 }
 
-protocol CommonRIBsResourceFlush {
+public protocol CommonRIBsResourceFlush {
     func flushRIBsResources()
 }
 
 public class CommonRIBsViewController: UIViewController, ViewControllable {
     
-    var flushRouter: CommonRIBsResourceFlush? {
+    public var flushRouter: CommonRIBsResourceFlush? {
         nil
     }
 }
@@ -51,18 +51,18 @@ public class CommonRIBsRouter<InteractorType, ViewControllerType>: ViewableRoute
     }
 }
 
-class RIBNavigationController: UINavigationController, UINavigationControllerDelegate {
+public class CommonRIBNavigationController: UINavigationController, UINavigationControllerDelegate {
 
     private var cachedViewController: [UIViewController] = []
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.delegate = self
     }
     
-    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+    public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         
         super.pushViewController(viewController, animated: animated)
         print("Pushed target: \(viewController), child: \(viewController.children)")

@@ -14,11 +14,11 @@ protocol MasterInteractable: CommonRIBsInteractable {
 
 final class MasterRouter: CommonRIBsRouter <MasterInteractable, ViewControllable>, MasterRouting, LaunchRouting {
     
-    var navigationController: RIBNavigationController!
+    var navigationController: CommonRIBNavigationController!
     
     func launch(from window: UIWindow) {
         
-        navigationController = RIBNavigationController(rootViewController: viewControllable.uiviewController)
+        navigationController = CommonRIBNavigationController(rootViewController: viewControllable.uiviewController)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
 
