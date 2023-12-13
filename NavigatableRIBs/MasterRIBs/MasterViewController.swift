@@ -37,18 +37,16 @@ final class MasterViewController: CommonRIBsViewController, MasterPresentable {
 
     weak var listener: MasterPresentableListener?
     
-    override var flushRouter: CommonRIBsResourceFlush? {
-        
+    override var resourceFlusher: CommonRIBsResourceFlush? {
+
         guard let listener = listener as? CommonRIBsInteractable else { return nil }
-        
-        return listener.flushRouter
+        return listener.resourceFlusher
     }
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         self.navigationItem.title = "Example cases"
-        
     }
 }
 
