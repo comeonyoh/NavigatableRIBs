@@ -9,7 +9,7 @@ import RIBs
 import UIKit
 
 public protocol CommonRIBsInteractable: Interactable {
-    var flushRouter: CommonRIBsResourceFlush? { get }
+    var resourceFlusher: CommonRIBsResourceFlush? { get }
 }
 
 public protocol CommonRIBsResourceFlush {
@@ -18,7 +18,7 @@ public protocol CommonRIBsResourceFlush {
 
 public class CommonRIBsViewController: UIViewController, ViewControllable {
     
-    public var flushRouter: CommonRIBsResourceFlush? {
+    public var resourceFlusher: CommonRIBsResourceFlush? {
         nil
     }
 }
@@ -78,16 +78,13 @@ public class CommonRIBNavigationController: UINavigationController, UINavigation
         
         guard let currentIndex = cachedViewController.firstIndex(of: viewController), cachedViewController.count > currentIndex + 1 else { return }
         
-        //  When the last dismissed view controller is kind of a RIBs.
-        guard cachedViewController[currentIndex + 1] is ViewControllable else {
-
+        //  When the last dismissed view controller is kind of a RIBs and CommonRIBsViewController.
+        guard cachedViewController[currentIndex + 1] is ViewControllable, let current = cachedViewController[currentIndex] as? CommonRIBsViewController else {
             cachedViewController = Array(cachedViewController[0...currentIndex])
             return
         }
         
-        guard let current = cachedViewController[currentIndex] as? CommonRIBsViewController else { return }
-        
-        current.flushRouter?.flushRIBsResources()
+        current.resourceFlusher?.flushRIBsResources()
         cachedViewController = Array(cachedViewController[0...currentIndex])
     }
 }

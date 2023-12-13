@@ -15,11 +15,14 @@ protocol MasterInteractable: CommonRIBsInteractable {
 final class MasterRouter: CommonRIBsRouter <MasterInteractable, ViewControllable>, MasterRouting, LaunchRouting {
     
     var navigationController: CommonRIBNavigationController!
+    var tabbar: UITabBarController!
     
     func launch(from window: UIWindow) {
         
         navigationController = CommonRIBNavigationController(rootViewController: viewControllable.uiviewController)
-        window.rootViewController = navigationController
+        tabbar = UITabBarController()
+        tabbar.setViewControllers([navigationController], animated: false)
+        window.rootViewController = tabbar
         window.makeKeyAndVisible()
 
         interactable.activate()

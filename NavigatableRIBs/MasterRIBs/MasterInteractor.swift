@@ -18,12 +18,11 @@ protocol MasterPresentable: Presentable {
 
 final class MasterInteractor: PresentableInteractor<MasterPresentable>, MasterInteractable {
     
-    var flushRouter: CommonRIBsResourceFlush? {
-        router as? CommonRIBsResourceFlush
-    }
-
     weak var router: MasterRouting?
     
+    public var resourceFlusher: CommonRIBsResourceFlush? {
+        router as? CommonRIBsResourceFlush
+    }
     override init(presenter: MasterPresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
